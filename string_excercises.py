@@ -33,11 +33,27 @@ def two_by_two_stringify(str):
     else: 
         return str[:2] + str[-2:]
 
+# 4. Write a Python program to get a string from a given string where all occurrences of 
+# its first char have been changed to '$', except the first char itself. Go to the editor
+# Sample String : 'restart'
+# Expected Result : 'resta$t'
+
+def dollar_maker(str):
+    str_changed = ''
+    count = 0
+    for char in str:
+        if char == str[0] and count > 0:
+            str_changed += '$'
+        else:
+            str_changed += char
+        count += 1
+    return str_changed
+
 print(len_counter("google.com"))
 print(len("google.com"))
 print(char_frequency_counter("google.com"))
 print(two_by_two_stringify("michael Jackson"))
 print(two_by_two_stringify("donald trump"))
 print(two_by_two_stringify("00"))
-
+print(dollar_maker('nina'))
 
