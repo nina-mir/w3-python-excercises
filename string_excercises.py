@@ -75,13 +75,41 @@ def not_poor_finder(str):
         return str[0:position_not] + 'good'
     else:
         return '' 
+# 8. Write a Python function that takes a list of words and returns the length of the longest one. 
 
-print(len_counter("google.com"))
-print(len("google.com"))
-print(char_frequency_counter("google.com"))
-print(two_by_two_stringify("michael Jackson"))
-print(two_by_two_stringify("donald trump"))
-print(two_by_two_stringify("00"))
-print(dollar_maker('nina'))
-print(char_mixup('Sweden','Ziemlich'))
-print(not_poor_finder('The lyrics is not that poor!'))
+def find_longest_word(words_list):
+    length = 0
+    for word in words_list:
+        if len(word) > length:
+            length = len(word)
+    return length
+
+# 9. Write a Python program to remove the nth index character from a nonempty string. lowest n is 1.
+def delete_nth_char(n, str):
+    index = 0
+    new_str = ''
+    if str:
+        for c in str:
+            index += 1
+            if index == n:
+                pass
+            else:
+                new_str = new_str + c
+        return new_str
+    else:
+        return "Empty strings needs to operations!"
+
+print(delete_nth_char(1, 'nina'))
+print(delete_nth_char(1, ''))
+
+
+# print(len_counter("google.com"))
+# print(len("google.com"))
+# print(char_frequency_counter("google.com"))
+# print(two_by_two_stringify("michael Jackson"))
+# print(two_by_two_stringify("donald trump"))
+# print(two_by_two_stringify("00"))
+# print(dollar_maker('nina'))
+# print(char_mixup('Sweden','Ziemlich'))
+# print(not_poor_finder('The lyrics is not that poor!'))
+# print(find_longest_word(["PHP", "Exercises", "Backend"]))
