@@ -49,6 +49,33 @@ def dollar_maker(str):
         count += 1
     return str_changed
 
+# 5. Write a Python program to get a single string from two given strings, separated by a space 
+# and swap the first two characters of each string. Go to the editor
+# Sample String : 'abc', 'xyz'
+# Expected Result : 'xyc abz'
+
+def char_mixup(str_1,str_2):
+    if len(str_1)>=2 and len(str_2) >= 2:
+        return str_2[0:2]+str_1[2:] + ' ' + str_1[0:2]+str_2[2:]
+    else:
+        return ''
+
+# 7. Write a Python program to find the first appearance of the substring 'not' and 'poor'
+# from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. 
+# Return the resulting string. Go to the editor
+# Sample String : 'The lyrics is not that poor!'
+# 'The lyrics is poor!'
+# Expected Result : 'The lyrics is good!'
+# 'The lyrics is poor!'
+
+def not_poor_finder(str):
+    position_not  = str.find('not')
+    position_poor = str.find('poor')
+    if (position_not and position_poor) and (position_not < position_poor):
+        return str[0:position_not] + 'good'
+    else:
+        return '' 
+
 print(len_counter("google.com"))
 print(len("google.com"))
 print(char_frequency_counter("google.com"))
@@ -56,4 +83,5 @@ print(two_by_two_stringify("michael Jackson"))
 print(two_by_two_stringify("donald trump"))
 print(two_by_two_stringify("00"))
 print(dollar_maker('nina'))
-
+print(char_mixup('Sweden','Ziemlich'))
+print(not_poor_finder('The lyrics is not that poor!'))
