@@ -99,9 +99,31 @@ def delete_nth_char(n, str):
     else:
         return "Empty strings needs to operations!"
 
+# 10. Write a Python program to change a given string to a new string where the first and last chars 
+# have been exchanged.
+def first_last_exchange(str):
+    try:
+        first = str[0]
+        last = str[-1]
+        new_list = []
+        new_str = ''
+        
+        for c in str:
+            new_list.append(c)
+        
+        new_list[0] = last
+        new_list[-1] = first
+    
+        for c in new_list:
+            new_str += c
+        return new_str 
+    except:
+        return 'Did you really pass a non-empty string?!'
+        
+
 print(delete_nth_char(1, 'nina'))
 print(delete_nth_char(1, ''))
-
+print(first_last_exchange(''))
 
 # print(len_counter("google.com"))
 # print(len("google.com"))

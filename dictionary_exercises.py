@@ -32,8 +32,6 @@ def dict_merg(*args):
         merged_result.update(item)
     return merged_result
 
-
-
 sort_key_ascend_descend(d)
 print( add_key_to_dict_obj({'nina':38}, d)  ) 
 print(dict_merg(dic1, dic2, dic3))
