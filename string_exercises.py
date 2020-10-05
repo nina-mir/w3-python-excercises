@@ -101,6 +101,7 @@ def delete_nth_char(n, str):
 
 # 10. Write a Python program to change a given string to a new string where the first and last chars 
 # have been exchanged.
+# w3 solution :       return str1[-1:] + str1[1:-1] + str1[:1]    
 def first_last_exchange(str):
     try:
         first = str[0]
@@ -119,11 +120,22 @@ def first_last_exchange(str):
         return new_str 
     except:
         return 'Did you really pass a non-empty string?!'
-        
 
-print(delete_nth_char(1, 'nina'))
-print(delete_nth_char(1, ''))
-print(first_last_exchange(''))
+# 11. Write a Python program to remove the characters which have odd index values 
+# of a given string. Go to the editor
+
+def rm_odd_index(str):
+    new_str = ''
+    for i in range(len(str)):
+        if i % 2 == 0:
+            new_str += str[i]
+    return new_str
+
+
+# print(delete_nth_char(1, 'nina'))
+# print(delete_nth_char(1, ''))
+# print(first_last_exchange(''))
+print( rm_odd_index('Verfassen')) 
 
 # print(len_counter("google.com"))
 # print(len("google.com"))
