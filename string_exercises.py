@@ -138,7 +138,9 @@ def rm_odd_index(str):
 def word_counter(sentence):
     result = {}
     if sentence:
+        # remove all the punctuations 
         sentence = sentence.translate(sentence.maketrans("","", string.punctuation))
+        # tokenize by delimiter of space
         initial_list = sentence.split()
         for word in initial_list:
             count = initial_list.count(word)

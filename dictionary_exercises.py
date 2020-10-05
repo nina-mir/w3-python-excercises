@@ -41,7 +41,7 @@ def key_exists(search, dict_obj):
         print("NO, it is not there!")
 
 
-key_exists('nina', d)
-# sort_key_ascend_descend(d)
+# key_exists('nina', d)
+sort_key_ascend_descend(d)
 # print( add_key_to_dict_obj({'nina':38}, d)  ) 
 # print(dict_merg(dic1, dic2, dic3))
