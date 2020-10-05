@@ -32,6 +32,16 @@ def dict_merg(*args):
         merged_result.update(item)
     return merged_result
 
-sort_key_ascend_descend(d)
-print( add_key_to_dict_obj({'nina':38}, d)  ) 
-print(dict_merg(dic1, dic2, dic3))
+# 4. Write a Python script to check whether a given key already exists in a dictionary.
+
+def key_exists(search, dict_obj):
+    if search in dict_obj:
+        print("Yes, it exists here!")
+    else:
+        print("NO, it is not there!")
+
+
+key_exists('nina', d)
+# sort_key_ascend_descend(d)
+# print( add_key_to_dict_obj({'nina':38}, d)  ) 
+# print(dict_merg(dic1, dic2, dic3))
