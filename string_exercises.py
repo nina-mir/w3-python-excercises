@@ -1,3 +1,5 @@
+import string
+
 # 1. Write a Python program to calculate the length of a string. Go to the editor
 def len_counter(str):
     count = 0
@@ -131,11 +133,29 @@ def rm_odd_index(str):
             new_str += str[i]
     return new_str
 
+# 12. Write a Python program to count the occurrences of each word in a given sentence.
+
+def word_counter(sentence):
+    result = {}
+    if sentence:
+        sentence = sentence.translate(sentence.maketrans("","", string.punctuation))
+        initial_list = sentence.split()
+        for word in initial_list:
+            count = initial_list.count(word)
+            result[word] = count
+        return result
+    else:
+        print("Enter a non-empty sentence")
+        return result
+
+print(word_counter("ich bin ein vogel im Himmel wie ein Kaese."))
+print(word_counter(""))
+
 
 # print(delete_nth_char(1, 'nina'))
 # print(delete_nth_char(1, ''))
 # print(first_last_exchange(''))
-print( rm_odd_index('Verfassen')) 
+# print( rm_odd_index('Verfassen')) 
 
 # print(len_counter("google.com"))
 # print(len("google.com"))
