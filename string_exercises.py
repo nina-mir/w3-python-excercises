@@ -150,6 +150,13 @@ def word_counter(sentence):
         print("Enter a non-empty sentence")
         return result
 
+# 13. Write a Python script that takes input from the user and displays 
+# that input back in upper and lower cases.
+def upper_unde_lower(text):
+    print(text.upper(), text.lower())
+
+
+upper_unde_lower("ich bin ein vogel im Himmel wie ein Kaese.")
 print(word_counter("ich bin ein vogel im Himmel wie ein Kaese."))
 print(word_counter(""))
 
