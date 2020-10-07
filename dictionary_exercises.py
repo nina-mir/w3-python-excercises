@@ -17,7 +17,7 @@ def add_key_to_dict_obj(new_entry, dict):
     dict.update(new_entry)
     return dict
 # 2.1 To add a new key we can also do the following
-def add_key(dict):
+def add_key(new_key, dict):
     new_item=2
     dict[new_key]=new_item
     # if we do this we do not have to pass the new_entry as a separate dictionary item into the arguments and we can dynamically change the item according to our needs.

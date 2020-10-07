@@ -1,3 +1,5 @@
+import operator
+
 sample_list = [x for x in range(10)]
 sample_string_list = ['abc', 'xyz', 'aba', '1221']
 
@@ -20,6 +22,19 @@ def prob_5(d):
             count += 1
     return count
 
+# 6. Write a Python program to get a list, sorted in increasing order by the last element in each tuple 
+# from a given list of non-empty tuples. 
+# Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+# Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
 
-print(sum_list(sample_list))
-print(prob_5(sample_string_list))
+def prob_6(list):
+   #  method.1 using lambda functions
+   sorted_1 = sorted(list,  key= lambda item: item[1] )
+   #  method.2 using operator.itemgetter
+   sorted_2 = sorted(list,  key= operator.itemgetter(1) ) 
+   return sorted_2
+   
+
+print(prob_6([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+# print(sum_list(sample_list))
+# print(prob_5(sample_string_list))
