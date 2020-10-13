@@ -160,19 +160,17 @@ upper_unde_lower("ich bin ein vogel im Himmel wie ein Kaese.")
 print(word_counter("ich bin ein vogel im Himmel wie ein Kaese."))
 print(word_counter(""))
 
+# 14. Write a Python program that accepts a comma separated sequence of words 
+# as input and prints the unique words in sorted form (alphanumerically). 
+# Sample Words : red, white, black, red, green, black
+# Expected Result : black, green, red, white,red
 
-# print(delete_nth_char(1, 'nina'))
-# print(delete_nth_char(1, ''))
-# print(first_last_exchange(''))
-# print( rm_odd_index('Verfassen')) 
+def Q_14():
+    items = input("Input comma separated sequence of words")
+    initial_list = items.translate ( items.maketrans('', '', " ") ) 
 
-# print(len_counter("google.com"))
-# print(len("google.com"))
-# print(char_frequency_counter("google.com"))
-# print(two_by_two_stringify("michael Jackson"))
-# print(two_by_two_stringify("donald trump"))
-# print(two_by_two_stringify("00"))
-# print(dollar_maker('nina'))
-# print(char_mixup('Sweden','Ziemlich'))
-# print(not_poor_finder('The lyrics is not that poor!'))
-# print(find_longest_word(["PHP", "Exercises", "Backend"]))
+    return initial_list.split(sep=',')
+
+example = 'red, white, black, red, green, black'
+
+print ( sorted ( list ( set( Q_14() ) ) ) )
