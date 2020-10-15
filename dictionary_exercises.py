@@ -45,8 +45,14 @@ def key_exists(search, dict_obj):
     else:
         print("NO, it is not there!")
 
+# 5. Write a Python program to iterate over dictionaries using for loops. Go to the editor
+d = {'x': 10, 'y': 20, 'z': 30} 
 
-# key_exists('nina', d)
-sort_key_ascend_descend(d)
-# print( add_key_to_dict_obj({'nina':38}, d)  ) 
-# print(dict_merg(dic1, dic2, dic3))
+def prob_5(d):
+    print(type (d.items()) )
+    print(d.items() )
+
+    for key, val in d.items():
+        print(str(key) + " -- " + str(val))
+
+prob_5(d)
