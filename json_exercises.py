@@ -41,14 +41,10 @@ def sort_dict_then_2_json(d):
 
 print(json.dumps(python_obj, sort_keys=True ,indent=4))
 
+# 5. Write a Python program to convert JSON encoded data into Python objects.
+def prob_5(d):
+    return json.loads(d)
 
-
-
-print(sort_dict_then_2_json(python_obj))
-# print(json_to_dict(example_json))
-# print(json_to_dict(x)['name'])
-# output = dict_2_json(python_obj)
-# print(type(python_obj))
-# print(type(output))
-# print(output)
-
+output = prob_5(example_json)
+print(type (output) )
+print(output)
