@@ -21,10 +21,17 @@ def prob_4(*args, set = set):
     for item in args:
         set.remove(item)
 
+# 5. Write a Python program to remove an item from a set if it is present in the set. 
+# discard function of this class takes care of the if condition and won't raise error if else.
 
-prob_2(example_1)
-prob_3("die Ente", example_0)
-prob_2(example_0)
-print("\n")
-prob_4("loeffel", "die Ente", set = example_0)
-prob_2(example_0)
+def prob_5(*args, set=set):
+    for item in args:
+            set.discard(item)
+        
+
+
+# prob_4("loeffel", "die Ente", set = example_0)
+print(example_0)
+# prob_4("nina" , set=example_0)
+prob_5("nina" , set=example_0)
+print(example_0)
