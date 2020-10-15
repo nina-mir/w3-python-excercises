@@ -1,7 +1,7 @@
 import operator
 
 sample_list = [x for x in range(10)]
-sample_string_list = ['abc', 'xyz', 'aba', '1221']
+string_list = ['abc', 'xyz', 'aba', '1221', 'aba', 'nina', 'nina']
 
 # 1. Write a Python program to sum all the items in a list. Go to the editor
 def sum_list(li):
@@ -33,8 +33,26 @@ def prob_6(list):
    #  method.2 using operator.itemgetter
    sorted_2 = sorted(list,  key= operator.itemgetter(1) ) 
    return sorted_2
-   
+    
+# 7. Write a Python program to remove duplicates from a list. 
+def prob_7(li):
+    set_temp = set(li)
+    return list(set_temp)
 
-print(prob_6([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+# 8. Write a Python program to check a list is empty or not. Go to the editor
+def prob_8(li):
+    if not li:
+        print("empty")
+    else: 
+        print("not empty")
+
+prob_8([1, "nina"])
+
+print(string_list)
+output = prob_7(string_list)
+print(output)
+
+
+# print(prob_6([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
 # print(sum_list(sample_list))
 # print(prob_5(sample_string_list))
