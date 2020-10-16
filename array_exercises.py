@@ -1,7 +1,7 @@
 from array import *
 
 
-arr = [10, 20, 30, 40, 50]
+arr = [10, 20, 30, 40, 50, 'nina', 'vogel', 'nina', 'vogel', 'nina', 'vogel' ]
 ar = array('i', [0,1,2,3,4])
 # 1. Write a Python program to create an array of 5 integers and display the array items. 
 # Access individual element through indexes. Go to the editor
@@ -39,3 +39,11 @@ def prob_5(arr):
     print(buff, buff[1] * arr.itemsize)
 
 prob_5(ar)
+
+# 6. Write a Python program to get the number of occurrences of
+#  a specified element in an array. Go to the editor
+
+def prob_6(arr, item):
+    return arr.count(item)
+
+print(prob_6(arr, 'nina'))
