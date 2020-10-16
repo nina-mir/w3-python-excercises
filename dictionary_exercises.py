@@ -55,4 +55,21 @@ def prob_5(d):
     for key, val in d.items():
         print(str(key) + " -- " + str(val))
 
-prob_5(d)
+# 6. Write a Python script to generate and print a dictionary that contains a number (between 1 and n)
+#  in the form (x, x*x).
+# Sample Dictionary ( n = 5) :
+# Expected Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+def prob_6(n):
+    keys = [i for i in range(1, n +1)]
+    values = [i*i for i in keys]
+    return dict( zip(keys,values) )
+
+def prob_6_dict_constructor(n):
+    x = dict()
+    for i in range(1, n + 1):
+        x[i] = i*i
+    return x
+
+
+print(prob_6_dict_constructor(7))
