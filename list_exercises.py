@@ -1,7 +1,9 @@
-import operator
+import operator, copy
 
 sample_list = [x for x in range(10)]
 string_list = ['abc', 'xyz', 'aba', '1221', 'aba', 'nina', 'nina']
+xs = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
 
 # 1. Write a Python program to sum all the items in a list. Go to the editor
 def sum_list(li):
@@ -46,11 +48,43 @@ def prob_8(li):
     else: 
         print("not empty")
 
-prob_8([1, "nina"])
 
-print(string_list)
-output = prob_7(string_list)
-print(output)
+# 9. Write a Python program to clone or copy a list
+def prob_9_list_constructor(original):
+    #shallow copy 
+    return list(original)
+
+def prob_9_slice(original):
+    # Shallow copy
+    return original[:]
+
+def prob_9_extend(original, clone):
+    #Shallow copy
+    clone.extend(original)
+
+def prob_9_copy_shallow(original):
+    #Shallow copy
+    return copy.copy(original) 
+
+def prob_9_copy_deep(original):
+    #Deep copy
+    return copy.deepcopy(original) 
+
+# clone.extend(xs)
+clone = prob_9_copy_deep(xs)
+clone[0] = 'Giles'
+
+print("original" + str(xs))
+print("clone" + str(clone))
+xs[1][0] = "captain"
+print("original" + str(xs))
+print("clone" + str(clone))
+
+# prob_8([1, "nina"])
+
+# print(string_list)
+# output = prob_7(string_list)
+# print(output)
 
 
 # print(prob_6([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
