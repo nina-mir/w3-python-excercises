@@ -183,9 +183,13 @@ example = 'red, white, black, red, green, black'
 def Q_15(tag_kind, sentence):
     text = '<{tag_kind}>{sentence}</{tag_kind}>'.format(tag_kind=tag_kind, sentence=sentence) 
     return text
-    
-print ( Q_15("i", "nina is great") )
 
+def Q_15_1(tag, word):
+    ''' Another solution '''
+    return "<%s>%s</%s>" % (tag, word, tag)
+
+print ( Q_15("i", "nina is great") )
+print ( Q_15_1("a", "nina is great") )
 
 
 
