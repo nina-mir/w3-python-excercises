@@ -173,4 +173,21 @@ def Q_14():
 
 example = 'red, white, black, red, green, black'
 
-print ( sorted ( list ( set( Q_14() ) ) ) )
+# print ( sorted ( list ( set( Q_14() ) ) ) )
+
+# 15. Write a Python function to create the HTML string with tags around the word(s). Go to the editor
+# Sample function and result :
+# add_tags('i', 'Python') -> '<i>Python</i>'
+# add_tags('b', 'Python Tutorial') -> '<b>Python Tutorial </b>'
+
+def Q_15(tag_kind, sentence):
+    text = '<{tag_kind}>{sentence}</{tag_kind}>'.format(tag_kind=tag_kind, sentence=sentence) 
+    return text
+    
+print ( Q_15("i", "nina is great") )
+
+
+
+
+
+
