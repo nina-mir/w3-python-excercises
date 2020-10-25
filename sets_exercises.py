@@ -1,6 +1,9 @@
 
-example_0 = set(["gabel", "messer", "teller", "loeffel", "artzin"])
-example_1 = set((0, 999, 101, 444))
+example_0 = set(["gabel", "Spiegel", "messer", "teller", "loeffel", "artzin"])
+example_1 = set((0, 999, "Spiegel", 101, 444, "teller"))
+example_2 = set((0, "Spiegel", "Welt", "Umwelt", "teller"))
+
+
 # 1. Write a Python program to create a set. Go to the editor
 def prob_1():
     return set()
@@ -27,11 +30,18 @@ def prob_4(*args, set = set):
 def prob_5(*args, set=set):
     for item in args:
             set.discard(item)
-        
-
 
 # prob_4("loeffel", "die Ente", set = example_0)
-print(example_0)
+# print(example_0)
 # prob_4("nina" , set=example_0)
-prob_5("nina" , set=example_0)
-print(example_0)
+# prob_5("nina" , set=example_0)
+# print(example_0)
+
+# 6. Write a Python program to create an intersection of sets. Go to the editor
+def Q_6(*args, set=set):
+    result = set
+    for item in args:
+        result = item & result
+    return result
+
+print( Q_6(example_1, example_2, set=example_0) )
