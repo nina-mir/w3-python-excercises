@@ -191,6 +191,18 @@ def Q_15_1(tag, word):
 print ( Q_15("i", "nina is great") )
 print ( Q_15_1("a", "nina is great") )
 
+# 17. Write a Python function to get a string made of 4 copies of the last two 
+# characters of a specified string (length must be at least 2).
+# Sample function and result :
+# insert_end('Python') -> onononon
+# insert_end('Exercises') -> eseseses
+
+def Q_17(word):
+    return word[-2:]*4
+
+print(Q_17("betrachten"))
+
+
 
 
 
