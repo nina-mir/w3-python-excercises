@@ -1,4 +1,4 @@
-import operator, copy
+import operator, copy, string
 
 sample_list = [x for x in range(10)]
 string_list = ['abc', 'xyz', 'aba', '1221', 'aba', 'nina', 'nina']
@@ -69,7 +69,7 @@ def prob_9_copy_shallow(original):
 def prob_9_copy_deep(original):
     #Deep copy
     return copy.deepcopy(original) 
-
+'''
 # clone.extend(xs)
 clone = prob_9_copy_deep(xs)
 clone[0] = 'Giles'
@@ -79,14 +79,23 @@ print("clone" + str(clone))
 xs[1][0] = "captain"
 print("original" + str(xs))
 print("clone" + str(clone))
+'''
 
-# prob_8([1, "nina"])
+# 10. Write a Python program to find the list of words that are longer than n from a given list of words.
+zeit = '''Frau Ehlers, man könnte sich vorstellen, dass 
+        Schuhe etwas sind, das der Mensch zu jeder Zeit 
+        braucht. Warum leidet Ihre Schuhmacherei an der Corona-Krise?'''
 
-# print(string_list)
-# output = prob_7(string_list)
-# print(output)
+def prob_10(input_txt, n):
+    result = []
+    #remove all punctuations
 
+    input_txt = input_txt.translate(input_txt.maketrans("","",string.punctuation))
+    words = input_txt.split()
+    for word in words:
+        if len(word) > n:
+            result.append(word)
 
-# print(prob_6([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
-# print(sum_list(sample_list))
-# print(prob_5(sample_string_list))
+    return result
+
+print(*prob_10(zeit, 10), sep='\n')
