@@ -39,12 +39,27 @@ def sort_dict_then_2_json(d):
     return json.dumps(d_sorted, indent=4)
 #OR another solution:
 
-print(json.dumps(python_obj, sort_keys=True ,indent=4))
+# print(json.dumps(python_obj, sort_keys=True ,indent=4))
 
 # 5. Write a Python program to convert JSON encoded data into Python objects.
 def prob_5(d):
     return json.loads(d)
 
-output = prob_5(example_json)
-print(type (output) )
-print(output)
+# output = prob_5(example_json)
+# print(type (output) )
+# print(output)
+
+
+# 6. Write a Python program to create a new JSON file from an existing JSON file.
+def prob_6(path, new_path):
+    with open(path) as f:
+        data = json.load(f)
+        f.close()
+
+    for item in data['members']:
+        del item['age']
+        
+    with open(new_path, 'w') as new_file:
+        json.dump(data, new_file, indent=4)
+
+prob_6('sample.json', 'new_copy.json')
