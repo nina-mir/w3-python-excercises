@@ -1,4 +1,4 @@
-import operator
+import operator, random
 
 # 1. Write a Python script to sort (ascending and descending) a dictionary by value.
 
@@ -73,3 +73,14 @@ def prob_6_dict_constructor(n):
 
 
 print(prob_6_dict_constructor(7))
+
+# 7. Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are square of keys. Go to the editor
+# Sample Dictionary
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}
+def prob_7():
+    n =  random.randint(1, 15)
+    return prob_6_dict_constructor(n)
+
+print('{info}{dictionary}'.format(info='prob 7 output: ', dictionary=prob_7()))
+
+
