@@ -216,6 +216,27 @@ def Q_18(word):
 
 print ( Q_18('Bau'))
 
+# 19. Write a Python program to get the last part of a string before a specified character. Go to the editor
+# https://www.w3resource.com/python-exercises
+# https://www.w3resource.com/python
 
 
+def Q_19(word, cutoff):
+    count = 0
+    for char in word:
+        
+        if char == cutoff:
+            return word[: count]
+        else:
+            count += 1
 
+def Q_19_find(word, cutoff):
+    index = word.find(cutoff)
+    if index > 0:
+        print(index)
+        return word[:index]
+    else:
+        return '{cutoff} is not a character in {word}'.format(cutoff=cutoff, word=word)
+
+print( Q_19('https://www.w3resource.com/python-exercises', '-'))
+print( Q_19_find('kompy', '-'))
