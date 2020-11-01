@@ -240,3 +240,11 @@ def Q_19_find(word, cutoff):
 
 print( Q_19('https://www.w3resource.com/python-exercises', '-'))
 print( Q_19_find('kompy', '-'))
+
+# 20. Write a Python function to reverses a string if it's length is a multiple of 4. 
+def Q_20(word):
+    if len(word)%4 == 0:
+        return ''.join(reversed(word))
+        
+
+print( Q_20("ninabona") ) 
