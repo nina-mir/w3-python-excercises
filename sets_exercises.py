@@ -45,3 +45,11 @@ def Q_6(*args, set=set):
     return result
 
 print( Q_6(example_1, example_2, set=example_0) )
+
+# 7. Write a Python program to create a union of sets. 
+def Q_7(*args, set= set):
+    
+    return set.union(*args)
+
+
+print(Q_7(example_1, example_2, set=example_0))
