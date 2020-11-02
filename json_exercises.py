@@ -63,3 +63,13 @@ def prob_6(path, new_path):
         json.dump(data, new_file, indent=4)
 
 prob_6('sample.json', 'new_copy.json')
+
+# 7. Write a Python program to check whether an instance is complex or not.
+def Q_7(obj):
+    if isinstance(obj, complex):
+        return [obj.real, obj.imag]
+    # Let the base class default method raise the TypeError
+    raise TypeError(repr(obj) + " is not JSON serialized")
+
+print( json.dumps(2 + 1j, default=Q_7) )
+print( json.dumps(set((1,2)), default=Q_7) )
