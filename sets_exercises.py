@@ -53,3 +53,18 @@ def Q_7(*args, set= set):
 
 
 print(Q_7(example_1, example_2, set=example_0))
+
+# 8. Write a Python program to create set difference. 
+
+def Q_8(*args, set=set):
+    return set.difference(*args)
+
+print('example_0 set is {set}'.format(set=example_0))
+print('example_1 set is {set}'.format(set=example_1))
+set_today = set(('amy', 'nina'))
+if isinstance(set_today, set):
+    print('ninaaaa')
+
+print(type(set_today))
+print(Q_8(example_1,set=example_0))
+
