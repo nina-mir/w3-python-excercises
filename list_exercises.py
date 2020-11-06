@@ -1,8 +1,9 @@
 import operator, copy, string
 
 sample_list = [x for x in range(10)]
-string_list = ['abc', 'xyz', 'aba', '1221', 'aba', 'nina', 'nina']
+list_words = ['abc', 'xyz', 'aba', '1221', 'aba', 'nina', 'nina']
 xs = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+list_1 = [x*x for x in range(5)]
 
 
 # 1. Write a Python program to sum all the items in a list. Go to the editor
@@ -99,3 +100,16 @@ def prob_10(input_txt, n):
     return result
 
 print(*prob_10(zeit, 10), sep='\n')
+
+# 11. Write a Python function that takes two lists
+# and returns True if they have at least one common member.
+def prob_11(list_1, list_2):
+    for item in list_1:
+        if item in list_2:
+            return True
+    return False
+
+print(prob_11(list_1, list_words))
+
+
+
