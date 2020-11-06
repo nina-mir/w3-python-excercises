@@ -111,5 +111,22 @@ def prob_11(list_1, list_2):
 
 print(prob_11(list_1, list_words))
 
+# 12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+# Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# Expected Output : ['Green', 'White', 'Black']
 
+def prob_12(*args, list = list):
+    target_indices = set(args)
+    for i in range(len(list)):
+        if i not in target_indices:
+            print(list[i])
+    return
 
+# w3 solution -- simply amazing!
+def prob_12_w3(list):
+
+    result = [x for (i,x) in enumerate(list) if i not in (0,4,5)]
+    print(result)
+
+prob_12(0,4,5,list=sample_list)
+prob_12_w3(sample_list)
