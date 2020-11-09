@@ -111,3 +111,14 @@ def prob_10(dict):
 
 
 print(prob_10(example_1))
+
+# 11. Write a Python program to multiply all the items in a dictionary.
+def prob_11(dict):
+    result = 1
+    for val in dict.values():
+        result *= val
+    return result
+
+print(prob_11(d_1))
+
+    
