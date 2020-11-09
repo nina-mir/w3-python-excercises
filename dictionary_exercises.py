@@ -104,3 +104,10 @@ def prob_9(*args):
 
 
 prob_9(example_1, d_1)
+
+# 10. Write a Python program to sum all the items in a dictionary.
+def prob_10(dict):
+    return sum(dict.values())
+
+
+print(prob_10(example_1))
