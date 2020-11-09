@@ -3,6 +3,9 @@ import operator, random
 # 1. Write a Python script to sort (ascending and descending) a dictionary by value.
 
 d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+d_1 = {'x': 10, 'y': 20, 'z': 30} 
+
+example_1 = {'vater':0, 'mutter':1, 'bruder':1, 'schwester':1, 'onkel':2, 'tante':4, 'cousine': 10, 'cousin':10}
 
 def sort_key_ascend_descend(d):
     ascend =  sorted(d.items(), key=operator.itemgetter(1)) 
@@ -46,7 +49,6 @@ def key_exists(search, dict_obj):
         print("NO, it is not there!")
 
 # 5. Write a Python program to iterate over dictionaries using for loops. Go to the editor
-d = {'x': 10, 'y': 20, 'z': 30} 
 
 def prob_5(d):
     print(type (d.items()) )
@@ -83,4 +85,22 @@ def prob_7():
 
 print('{info}{dictionary}'.format(info='prob 7 output: ', dictionary=prob_7()))
 
+# 8. Write a Python script to merge two Python dictionaries. 
 
+def prob_8(*args):
+    result = dict()
+    for item in args:
+        result = {**result, **item}
+    return result
+
+print(prob_8(d_1, example_1))
+
+# 9. Write a Python program to iterate over dictionaries using for loops. 
+def prob_9(*args):
+    for item in args:
+        for key, value in item.items():
+            print('key is {key} and value is {value}'.format(key=key, value= value))
+
+
+
+prob_9(example_1, d_1)
