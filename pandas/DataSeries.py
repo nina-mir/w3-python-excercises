@@ -13,6 +13,10 @@ print(prob_1(data))
 
 
 index=["CA", "OZ", "MJ"]
-john = pd.Series(data, index)
+john = pd.Series(data, index, name='john')
 
 print(john)
+
+# 2. Write a Pandas program to convert a Panda module Series to Python list and it's type. 
+print(john.to_markdown())
+print(john.to_list())
