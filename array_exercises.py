@@ -1,8 +1,11 @@
 from array import *
 
 
-arr = [10, 20, 30, 40, 50, 'nina', 'vogel', 'nina', 'vogel', 'nina', 'vogel' ]
+arr = [ 'nina', 'vogel', 'nina', 'vogel', 'nina', 'vogel' ]
 ar = array('i', [0,1,2,3,4])
+ar_2 = array('I', [88, 99, 77, 101])
+example_list = [x for x in range(1,19)]
+print(example_list)
 # 1. Write a Python program to create an array of 5 integers and display the array items. 
 # Access individual element through indexes. Go to the editor
 def prob_1():
@@ -47,3 +50,28 @@ def prob_6(arr, item):
     return arr.count(item)
 
 print(prob_6(arr, 'nina'))
+
+# 7. Write a Python program to append items from inerrable to the end of the array.
+def prob_7(addendum, arr):
+    if type(arr) is ArrayType:
+        return arr.extend(addendum)
+    else:
+        print("Nein! \n Nein! Nein!!!!   \n")
+
+# prob_7([1,1000,30000], ar)
+print(type(ar))
+# print(arr)
+
+# 8. Write a Python program to convert an array to an array of machine values and return the bytes representation.
+def prob_8(arr):
+    return bytes(arr)
+print(ar)
+print(prob_8(ar))
+
+# 9. Write a Python program to append items from a specified list. Go to the editor
+def prob_9(arr, list):
+    arr.fromlist(list)
+    
+print(ar)
+print(prob_9(ar, example_list))
+print(ar)
