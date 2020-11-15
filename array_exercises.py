@@ -75,3 +75,11 @@ def prob_9(arr, list):
 print(ar)
 print(prob_9(ar, example_list))
 print(ar)
+
+# 10. Write a Python program to insert a new item before the second element in an existing array. Go to the editor
+ar.insert(2,19999)
+print(ar)
+
+# 11. Write a Python program to remove a specified item using the index from an array. Go to the editor
+ar.pop(2)
+print(ar)
