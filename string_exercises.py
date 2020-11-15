@@ -248,3 +248,17 @@ def Q_20(word):
         
 
 print( Q_20("ninabona") ) 
+
+
+# 21. Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase
+# characters in the first 4 characters.
+
+def prob_21(word):
+    counter = 0 
+    for i in range(4):
+        if word[i].isupper():
+            counter += 1
+    if counter >= 2:
+        return word.upper()
+
+print(prob_21('HOsitalee'))
