@@ -262,3 +262,9 @@ def prob_21(word):
         return word.upper()
 
 print(prob_21('HOsitalee'))
+
+# 22.Write a Python program to sort a string lexicographically.
+print(sorted('HOsitalee', key=str.lower))
+print(sorted('HOsitalee', key=str.upper))
+result = ''.join(sorted('HOsitalee', key=str.lower))
+print(result)
