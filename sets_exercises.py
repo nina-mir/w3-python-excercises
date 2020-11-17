@@ -2,6 +2,7 @@
 example_0 = set(["gabel", "Spiegel", "messer", "teller", "loeffel", "artzin"])
 example_1 = set((0, 999, "Spiegel", 101, 444, "teller"))
 example_2 = set((0, "Spiegel", "Welt", "Umwelt", "teller"))
+example_3 = set(("gabel", "messer"))
 
 
 # 1. Write a Python program to create a set. Go to the editor
@@ -77,3 +78,15 @@ def Q_9(*args, set1=set):
 
 
 print(Q_9(example_1,example_2 ,set1= example_0))
+
+# 10. Write a Python program to check if a set is a subset of another set.
+def Q_10(*args, target=set):
+    ''' this checks if sets of args are subsets of the target set '''
+    for item in args:
+        if target.issubset(target):
+            print('Set {item} \n is a subset of the target set of {target}.\n'.format(item=item, target=target))
+
+
+Q_10(example_0, example_3,target=example_0)
+
+
