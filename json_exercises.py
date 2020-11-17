@@ -72,4 +72,18 @@ def Q_7(obj):
     raise TypeError(repr(obj) + " is not JSON serialized")
 
 print( json.dumps(2 + 1j, default=Q_7) )
-print( json.dumps(set((1,2)), default=Q_7) )
+# print( json.dumps(set((1,2)), default=Q_7) )
+
+# 8. Write a Python program to check whether a JSON string contains complex object or not.
+
+def Q_8_as_complex(dct):
+     if '__complex__' in dct:
+         return complex(dct['real'], dct['img'])
+     return dct
+
+print(
+    json.loads('{"__complex__": true, "real": 1, "img": 2}', object_hook=Q_8_as_complex)
+)
+print(
+json.loads('{"__complex__": true, "real": 4, "img": 5}', object_hook = Q_8_as_complex)
+)
