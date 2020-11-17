@@ -68,3 +68,12 @@ if isinstance(set_today, set):
 print(type(set_today))
 print(Q_8(example_1,set=example_0))
 
+# 9. Write a Python program to create a symmetric difference. Go to the editor
+def Q_9(*args, set1=set):
+    result = set()
+    for item in args:
+        result = result.symmetric_difference(set1.symmetric_difference(item))
+    return result
+
+
+print(Q_9(example_1,example_2 ,set1= example_0))
