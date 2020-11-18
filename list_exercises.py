@@ -130,3 +130,19 @@ def prob_12_w3(list):
 
 prob_12(0,4,5,list=sample_list)
 prob_12_w3(sample_list)
+
+# 13. Write a Python program to generate a 3*4*6 3D array whose each element is *. Go to the editor
+def prob_13(char):
+   
+    zahl = ["*" for x in range(6)]
+    col = [zahl for x in range(4)]
+    komplett = [col for x in range(3)]
+    # print(zahl)
+    # print(col)
+    print(komplett)
+
+# 14. Write a Python program to print the numbers of a specified list after removing even numbers from it. Go to the editor
+# Click me to see the sample solution
+
+# 15. Write a Python program to shuffle and print a specified list. Go to the editor
+# Click me to see the sample solution
