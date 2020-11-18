@@ -1,4 +1,4 @@
-import operator, copy, string
+import operator, copy, string, random
 
 sample_list = [x for x in range(10)]
 list_words = ['abc', 'xyz', 'aba', '1221', 'aba', 'nina', 'nina']
@@ -141,8 +141,17 @@ def prob_13(char):
     # print(col)
     print(komplett)
 
-# 14. Write a Python program to print the numbers of a specified list after removing even numbers from it. Go to the editor
-# Click me to see the sample solution
+# 14. Write a Python program to print the numbers of a specified list after removing even numbers from it
+def prob_14(list):
+    result = [x for x in list if x % 2 != 0]
+    print(result)        
+
+prob_14(sample_list)
+
 
 # 15. Write a Python program to shuffle and print a specified list. Go to the editor
-# Click me to see the sample solution
+def prob_15(list):
+    return random.shuffle(list)
+
+prob_15(sample_list)
+print(sample_list)
