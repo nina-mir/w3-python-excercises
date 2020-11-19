@@ -65,8 +65,8 @@ print(type(ar))
 # 8. Write a Python program to convert an array to an array of machine values and return the bytes representation.
 def prob_8(arr):
     return bytes(arr)
-print(ar)
-print(prob_8(ar))
+# print(ar)
+# print(prob_8(ar))
 
 # 9. Write a Python program to append items from a specified list. Go to the editor
 def prob_9(arr, list):
@@ -83,3 +83,9 @@ print(ar)
 # 11. Write a Python program to remove a specified item using the index from an array. Go to the editor
 ar.pop(2)
 print(ar)
+
+# 12. Write a Python program to remove the first occurrence of a specified element from an array.
+
+def prob_12(arr, elem):
+    arr.remove(elem)
+
