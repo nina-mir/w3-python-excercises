@@ -268,3 +268,24 @@ print(sorted('HOsitalee', key=str.lower))
 print(sorted('HOsitalee', key=str.upper))
 result = ''.join(sorted('HOsitalee', key=str.lower))
 print(result)
+
+# 23. Write a Python program to remove a newline in Python.
+def prob_23(sentence):
+    # remove all the punctuations 
+    sentence = sentence.translate(sentence.maketrans("","", "\n"))
+    print(sentence)
+   
+    
+str = """
+
+
+
+        x
+      nina
+
+
+      """
+print(str)
+print("****")
+prob_23(str)
+# print(str)
