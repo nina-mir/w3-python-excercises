@@ -4,6 +4,8 @@ import operator, random
 
 d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
 d_1 = {'x': 10, 'y': 20, 'z': 30} 
+list_1 = [x*x*x for x in range( 5)]
+list_2 = [x*x for x in range(10, 20) if x%2 == 0]
 
 example_1 = {'vater':0, 'mutter':1, 'bruder':1, 'schwester':1, 'onkel':2, 'tante':4, 'cousine': 10, 'cousin':10}
 
@@ -122,3 +124,20 @@ def prob_11(dict):
 print(prob_11(d_1))
 
     
+# 12. Write a Python program to remove a key from a dictionary.
+def prob_12(dict, key=input):
+    if key in dict:
+        del dict[key]
+
+print(example_1)
+prob_12(example_1, key="nina")
+print(example_1)
+
+# 13. Write a Python program to map two lists into a dictionary.
+def prob_13(list_1, list_2):
+    return zip(list_1, list_2)
+
+print(list_1)
+print(list_2)
+result = prob_13(list_1, list_2)
+print(dict(result))
