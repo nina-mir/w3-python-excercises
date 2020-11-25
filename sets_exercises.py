@@ -1,3 +1,5 @@
+import copy
+
 
 example_0 = set(["gabel", "Spiegel", "messer", "teller", "loeffel", "artzin"])
 example_1 = set((0, 999, "Spiegel", 101, 444, "teller"))
@@ -77,7 +79,7 @@ def Q_9(*args, set1=set):
     return result
 
 
-print(Q_9(example_1,example_2 ,set1= example_0))
+# print(Q_9(example_1,example_2 ,set1= example_0))
 
 # 10. Write a Python program to check if a set is a subset of another set.
 def Q_10(*args, target=set):
@@ -87,6 +89,12 @@ def Q_10(*args, target=set):
             print('Set {item} \n is a subset of the target set of {target}.\n'.format(item=item, target=target))
 
 
-Q_10(example_0, example_3,target=example_0)
+# Q_10(example_0, example_3,target=example_0)
 
 
+# 11. Write a Python program to create a shallow copy of sets. Go to the editor
+nina = copy.copy(example_1)
+print(nina)
+example_1.add("meeeesser")
+example_1.discard(444)
+print(nina)
