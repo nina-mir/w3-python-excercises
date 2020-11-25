@@ -29,15 +29,14 @@ class prob_1:
         #     raise TypeError, "expected integer, got %s" % type(self.int)
         # if not 0 < self.int < 4000:
         #     raise ValueError, "Argument must be between 1 and 3999"
-        ints = (1000, 900,  500, 400, 100,  90, 50,  40, 10,  9,   5,  4,   1)
-        nums = ('M',  'CM', 'D', 'CD','C', 'XC','L','XL','X','IX','V','IV','I')
-        for i in range(len(ints)):
-            count = int(self.int / ints[i])
-            self.roman.append(nums[i] * count)
-            self.int -= ints[i] * count
+        
+        for i in range(len(self.ints)):
+            count = int(self.int / self.ints[i])
+            self.roman.append(self.nums[i] * count)
+            self.int -= self.ints[i] * count
         return ''.join(self.roman)
 
 
-x = prob_1(10)
+x = prob_1(11)
 print(x.convert())
 print(x.__doc__)
