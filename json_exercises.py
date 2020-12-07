@@ -87,3 +87,12 @@ print(
 print(
 json.loads('{"__complex__": true, "real": 4, "img": 5}', object_hook = Q_8_as_complex)
 )
+
+# 9. Write a Python program to access only unique key value of a Python object.
+python_obj = '{"a":  1, "a":  2, "a":  3, "a": 4, "b": 1, "b": 2}'
+print(type(python_obj))
+print(python_obj)
+
+json = json.loads(python_obj)
+print(json)
+
